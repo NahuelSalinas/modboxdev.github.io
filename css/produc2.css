@@ -1,0 +1,147 @@
+*{
+    font-family: 'Inter bold', sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+/*header{
+    padding-left: 2vh;
+    padding-right: 2vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(10vh, auto);
+    background-color: #fff;
+}
+
+header .menu{
+    margin-left: auto;
+    font-size: 1.34rem;
+    font-weight: 600;
+    padding: 3.5vh;
+}
+
+header .logo{
+    padding: 2vh;
+}
+
+header .logo a{
+    font-weight: 600;
+    font-size: 4vh;
+    color: rgb(22, 20, 20);
+}
+
+header .logo b{
+    font-weight: 600;
+    color: rgb(160, 59, 255);
+}
+
+header .menu a{
+    text-decoration: none;
+}
+
+header .menu a:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}*/
+
+/*Fin del Header*/
+
+/*Inicio Título*/
+.titulo{
+    margin-top: 12vh;
+    text-align: center;
+}
+
+.titulo h1{
+    font-weight: 600;
+}
+
+/*Fin Título*/
+
+/*Principio Productos*/
+
+.contenedor{
+    align-content: center;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    justify-items: center;
+}
+
+.producto{
+    width: 80%;
+    height: 90%;
+    padding: 6%;
+    margin-bottom: 3vh;
+    background-color: #ffff;
+    border-radius: 1vh;
+}
+
+.producto img{
+    width: 100%;
+    height: 40%;
+}
+
+.cuerpo h3{
+    font-size: 100%;
+    padding-top: 12%;
+    color: rgb(54, 54, 54);
+    font-weight: 600;
+}
+
+.cuerpo p{
+    width: 90%;
+    max-height: 11vh;
+    padding-bottom: 10%;
+    font-size: 78%;
+    margin: auto;
+}
+
+.abajo button{
+    display: grid;
+    margin: auto;
+}
+
+.abajo a{
+    text-decoration: none;
+    font-size: 84%;
+    color: #ffff;
+    font-weight: 500;
+}
+
+.producto button{
+    background-color: cornflowerblue;
+    padding: 2%;
+    border-radius: 0.5vh;
+    border: none;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.producto button:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/*Footer - pie de pagina*/
+
+.container-footer{
+    width: 100%;
+    padding: 20px 0;
+    background: #fff;
+}
+
+.container-footer footer{
+    max-width: 100%;
+    margin: auto;
+}
+
+.container-footer h4{
+    text-align: center;
+    font-size: medium;
+    color: #8e8e8e;
+    font-weight: 500;
+}

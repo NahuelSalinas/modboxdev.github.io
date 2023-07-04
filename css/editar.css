@@ -1,0 +1,31 @@
+.editor {
+    max-width: 80%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+.panel {
+    margin-bottom: 20px;
+  }
+  
+.panel h3 {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+  }
+  
+.panel-content {
+    display: none;
+    padding: 10px;
+  }
+  
+.preview {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+  }

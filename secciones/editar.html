@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Fuente Inter-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/editar.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+    <title>ModBox</title>
+</head>
+<body>
+    <header>
+      <div class="logo">
+            <a href="index.html">Mod<b>Box</b></a>
+        </div>
+        <div class="menu">
+            <a href="index.html" id="inicio">Inicio</a>
+            <!--<a href="/secciones/productos.html" id="Productos">Productos</a>-->
+            <a href="/secciones/nosotros.html" id="Nosotros">Nosotros</a>
+            <a href="/secciones/comunidad.html">Comunidad</a>
+        </div>
+
+    </header>
+
+    <br><br>
+
+    <div class="editor">
+        <div class="panel">
+          <h3 onclick="togglePanel('frontal')">Panel frontal</h3>
+          <div class="panel-content" id="frontal">
+            <!-- Opciones del panel frontal -->
+            <input type="radio" name="frontal-option" value="option1"> Opción 1<br>
+            <input type="radio" name="frontal-option" value="option2"> Opción 2<br>
+            <input type="radio" name="frontal-option" value="option3"> Opción 3<br>
+          </div>
+        </div>
+        
+        <div class="panel">
+          <h3 onclick="togglePanel('lateral-izquierdo')">Lateral izquierdo</h3>
+          <div class="panel-content" id="lateral-izquierdo">
+            <!-- Opciones del lateral izquierdo -->
+            <input type="checkbox" name="lateral-izquierdo-option1" value="option1"> Opción 1<br>
+            <input type="checkbox" name="lateral-izquierdo-option2" value="option2"> Opción 2<br>
+            <input type="checkbox" name="lateral-izquierdo-option3" value="option3"> Opción 3<br>
+          </div>
+        </div>
+        
+        <div class="panel">
+          <h3 onclick="togglePanel('lateral-derecho')">Lateral derecho</h3>
+          <div class="panel-content" id="lateral-derecho">
+            <!-- Opciones del lateral derecho -->
+            <select name="lateral-derecho-option">
+              <option value="option1">Opción 1</option>
+              <option value="option2">Opción 2</option>
+              <option value="option3">Opción 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="panel">
+            <h3 onclick="togglePanel('panel-superior')">Panel superior</h3>
+            <div class="panel-content" id="panel-superior">
+                <!-- Opciones del panel superior -->
+                <textarea name="panel-superior-option" rows="4" cols="30"></textarea>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3 onclick="togglePanel('accesorios')">Accesorios</h3>
+            <div class="panel-content" id="accesorios">
+              <!-- Opciones de accesorios -->
+              <input type="checkbox" name="accesorios-option1" value="option1"> Opción 1<br>
+              <input type="checkbox" name="accesorios-option2" value="option2"> Opción 2<br>
+              <input type="checkbox" name="accesorios-option3" value="option3"> Opción 3<br>
+            </div>
+        </div>
+          
+        <div class="preview">
+            <h2>Previsualización del Gabinete de PC</h2>
+            <div id="preview-content">
+              <!-- Aquí se mostrará la previsualización -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePanel(panelId) {
+        var panel = document.getElementById(panelId);
+        var panelContent = panel.querySelector('.panel-content');
+        panelContent.style.display = panelContent.style.display === 'none' ? 'block' : 'none';
+        updatePreview();
+    }
+  
+  function updatePreview() {
+    var previewContent = document.getElementById('preview-content');
+    previewContent.innerHTML = '';
+    
+    // Obtener las opciones seleccionadas de cada panel
+    var frontalOptions = document.getElementsByName('frontal-option');
+    var lateralIzquierdoOptions = document.getElementsByName('lateral-izquierdo-option');
+    var lateralDerechoOption = document.getElementsByName('lateral-derecho-option')[0].value;
+    var panelSuperiorOption = document.getElementsByName('panel-superior-option')[0].value;
+    var accesoriosOptions = document.getElementsByName('accesorios-option');
+    
+    // Construir la previsualización basada en las opciones seleccionadas
+    var preview = document.createElement('div');
+    
+    var frontalPreview = document.createElement('div');
+    frontalPreview.innerHTML = 'Panel frontal: ' + getSelectedOption(frontalOptions);
+    preview.appendChild(frontalPreview);
+    
+    var lateralIzquierdoPreview = document.createElement('div');
+    lateralIzquierdoPreview.innerHTML = 'Lateral izquierdo: ' + getSelectedOptions(lateralIzquierdoOptions);
+    preview.appendChild(lateralIzquierdoPreview);
+    
+    var lateralDerechoPreview = document.createElement('div');
+    lateralDerechoPreview.innerHTML = 'Lateral derecho: ' + lateralDerechoOption;
+    preview.appendChild(lateralDerechoPreview);
+    
+    var panelSuperiorPreview = document.createElement('div');
+    panelSuperiorPreview.innerHTML = 'Panel superior: ' + panelSuperiorOption;
+    preview.appendChild(panelSuperiorPreview);
+    
+    var accesoriosPreview = document.createElement('div');
+    accesoriosPreview.innerHTML = 'Accesorios: ' + getSelectedOptions(accesoriosOptions);
+    preview.appendChild(accesoriosPreview);
+    
+    previewContent.appendChild(preview);
+  }
+  
+  function getSelectedOption(options) {
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].checked) {
+        return options[i].value;
+      }
+    }
+    return 'Ninguna opción seleccionada';
+  }
+  
+  function getSelectedOptions(options) {
+    var selectedOptions = [];
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].checked) {
+        selectedOptions.push(options[i].value);
+      }
+    }
+    if (selectedOptions.length === 0) {
+      return 'Ninguna opción seleccionada';
+    } else {
+      return selectedOptions.join(', ');
+    }
+  }
+    </script>
+
+    <div class="container-footer">	
+
+      <footer>
+          <div class="logo-footer">
+              <img src="" alt="">
+          </div>
+
+          <div class="redes-footer">
+              <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+          </div>
+
+          <hr>
+          <h4>© 2023 ModBox Team - Todos los Derechos Reservados</h4>
+      </footer>
+
+  </div>
+</body>
+</html>

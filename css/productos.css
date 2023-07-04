@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/*Inicio Título*/
+.titulo{
+    margin-top: 12vh;
+    text-align: center;
+}
+
+.titulo h1{
+    font-weight: 600;
+}
+
+/*Fin Título*/
+
+/*Principio Productos*/
+
+.contenedor{
+    align-content: center;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    justify-items: center;
+}
+
+.producto{
+    width: 80%;
+    height: 90%;
+    padding: 6%;
+    margin-bottom: 3vh;
+    background-color: #ffff;
+    border-radius: 1vh;
+}
+
+.producto img{
+    width: 100%;
+    height: 40%;
+}
+
+.cuerpo h3{
+    font-size: 100%;
+    padding-top: 12%;
+    color: rgb(54, 54, 54);
+    font-weight: 600;
+}
+
+.cuerpo p{
+    width: 90%;
+    max-height: 11vh;
+    padding-bottom: 10%;
+    font-size: 78%;
+    margin: auto;
+}
+
+.abajo button{
+    display: grid;
+    margin: auto;
+}
+
+.abajo a{
+    text-decoration: none;
+    font-size: 84%;
+    color: #ffff;
+    font-weight: 500;
+}
+
+.producto button{
+    background-color: cornflowerblue;
+    padding: 2%;
+    border-radius: 0.5vh;
+    border: none;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.producto button:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/*Footer - pie de pagina*/
+
+.container-footer{
+    width: 100%;
+    padding: 20px 0;
+    background: #fff;
+}
+
+.container-footer footer{
+    max-width: 100%;
+    margin: auto;
+}
+
+.container-footer h4{
+    text-align: center;
+    font-size: medium;
+    color: #8e8e8e;
+    font-weight: 500;
+}
