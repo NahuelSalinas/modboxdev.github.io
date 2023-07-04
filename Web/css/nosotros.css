@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root{
+    --bgColor: #1e1e1e;
+    --colorLogo: #662d91;
+    --colorFuente: #f1b7ff;
+    --colorFuente2: white;
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-color: var(--bgColor);
+    margin: 0;
+}
+
+header{
+    padding-left: 2vh;
+    padding-right: 2vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(10vh, auto);
+    /*background-color: #fff;*/
+    background-color: var(--bgColor);
+}
+
+header .menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.34rem;
+    font-weight: 600;
+    padding: 3.5vh;
+}
+
+header .logo{
+    padding: 2vh;
+}
+
+header .logo{
+    padding: 2vh;
+}
+
+header .menu a{
+    text-decoration: none;
+    margin: 4px;
+    /*color: rgb(160, 59, 255);*/
+    color: #ffffffe0;
+}
+
+header .menu a:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/*Fin del Header*/
+
+.texto{
+    width: 60%;
+    padding: 4.5vh;
+    margin: auto;
+}
+
+.texto h1{
+    padding-top: 1vh;
+    font-size: 5vh;
+    text-align: center;
+    color: var(--colorFuente);
+}
+
+.texto h2{
+    width: 100%;
+    opacity: 0.9;
+    text-align: center;
+    margin: auto;
+    font-size: 3vh;
+    color: var(--colorFuente2);
+}
+
+/*Footer - pie de pagina*/
+
+.container-footer{
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--bgColor);
+}
+
+.container-footer footer{
+    width: auto;
+    margin: auto;
+}
+
+.container-footer h4{
+    text-align: center;
+    font-size: medium;
+    color: #8e8e8e;
+    font-weight: 500;
+}
