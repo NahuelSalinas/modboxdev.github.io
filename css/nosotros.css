@@ -30,9 +30,6 @@ header .menu{
     display: flex;
     justify-content: center;
     width: 100%;
-    font-size: 1.34rem;
-    font-weight: 600;
-    padding: 3.5vh;
 }
 
 header .logo{
@@ -46,8 +43,7 @@ header .logo{
 header .menu a{
     text-decoration: none;
     margin: 4px;
-    /*color: rgb(160, 59, 255);*/
-    color: #ffffffe0;
+    color: var(--colorFuente2);
 }
 
 header .menu a:hover{
@@ -65,7 +61,7 @@ header .menu a:hover{
 
 .texto h1{
     padding-top: 1vh;
-    font-size: 5vh;
+    font-size: 4.5vh;
     text-align: center;
     color: var(--colorFuente);
 }
@@ -75,7 +71,7 @@ header .menu a:hover{
     opacity: 0.9;
     text-align: center;
     margin: auto;
-    font-size: 3vh;
+    font-size: 2.8vh;
     color: var(--colorFuente2);
 }
 
