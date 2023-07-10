@@ -19,8 +19,8 @@ header .menu{
 }
 
 header .logo img{
-    padding: 1vh;
-    width: 3.6rem;
+    padding: 2.5vh;
+    width: 2.6rem;
 }
 
 header .logo img:hover{
@@ -106,6 +106,7 @@ header .nav-item{
 }
 
 @media(max-width:768px){
+
     .hamburger{
         display: block;
     }
