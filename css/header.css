@@ -107,6 +107,28 @@ header .nav-item{
 
 @media(max-width:768px){
 
+    .texto{
+        z-index: -1;
+        position: relative;
+    }
+
+    main{
+        margin-top: 75px;
+        z-index: -1;
+    }
+
+    header{
+        top: 0;
+        position: fixed;
+        width: 100vw;
+        padding-left: 0;
+    }
+
+    .navbar{
+        padding-left: 0;
+        padding-right: 48px;
+    }
+
     .hamburger{
         display: block;
     }
@@ -125,25 +147,29 @@ header .nav-item{
 
     .nav-menu{
         position: fixed;
-        left: -100%;
-        top: 70px;
+        top: -100%;
+        left: 0;
         gap: 0;
         flex-direction: column;
         background-color: var(--bgColor);
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        z-index: 1;
     }
 
     .nav-item{
-        margin: 16px 0;
+        margin: 16px;
     }
 
     .nav-menu.active{
-        left: 0;
+        top: 4.7em;
+        padding: 0;
+        margin: 0;
     }
 
     .slider{
-        display: none;        
+        position: relative;
+        z-index: -1;        
     }
 }
