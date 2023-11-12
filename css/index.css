@@ -117,16 +117,16 @@
 }
 
 .img-text {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     width: 90%;
   }
   
-  .descripcion {
-    flex: 1 1 300px;
+  .descripcion{
     margin: auto;
     padding-bottom: 1rem;
+    width: fit-content;
     text-align: justify;
   }
   
@@ -198,6 +198,13 @@
 }
 
 /*Mobile*/
+
+@media screen and (max-width: 800px){
+    .img-text{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 @media screen and (max-width: 580px){
     .textos{
