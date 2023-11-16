@@ -60,6 +60,22 @@
 
 /*Seccion del cover finalizada*/
 
+/*  Gráficos JS */
+
+.grafico{
+    width: 40%;
+    margin: auto;
+    color: var(--colorFuente);
+    text-align: justify;
+}
+
+.grafico canvas{
+    width: 7em;
+}
+
+/* Fin Gráficos JS */
+
+
 .textos{
     width: 60%;
     margin: auto;
